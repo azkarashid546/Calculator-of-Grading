@@ -1,38 +1,406 @@
-.App {
+/* ========================Navbar============================= */
+
+.header{
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 5px 20px; 
+}
+
+.logo {
+  max-width: 25%;
+  height: 100%;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list ul {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+ul li {
+  list-style: none;
+  font-size: 15px;
+}
+
+ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 17px;
+}
+
+.mobile-navbar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color:  #e0e0e0;
+  padding-top: 20px;
+  transition: all 0.3s ease;
+}
+
+.mobile-navbar.open {
+  left: 0;
+  z-index: 9999999999999999999999;
+}
+
+.icon i {
+  color: black;
+}
+
+.mob-img {
+  width: 100%;
+  height: 100%;
+}
+.mob-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.mobnav-list {
+  padding : 10px
+}
+
+.mobnav-list ul li {
+  margin-bottom : 10px;
+  font-size : 18px;
+  font-weight : 700px
+}
+/* ======================Grade Calculator========================= */
+
+.calculator {
+  background-color: #f0f0f0;
+}
+
+.calculator-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 30px 20px;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 50px;
+}
+
+.heading h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-field {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.form-field label {
+  font-size: 17px;
+}
+
+.form-field input {
+  border: 1px solid gray;
+  outline: none;
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 5px;
+
+}
+
+.calculator-grid button {
+  background-color: black;
   color: white;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  font-size: 18px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.correct-ans {
+  background-color: green;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.wrong-ans {
+  background-color: red;
+  padding: 20px;
+  color: white;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.percentage {
+  background-color: #e0e0e0;
+  padding: 20px;
+  color: black;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.grade {
+  background-color: #e0e0e0;
+  padding: 20px;
+  color: black;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.result-table {
+  overflow-x: auto;
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table,
+th,
+td {
+  border: 1px solid #ddd;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+}
+.result-table {
+  margin: 20px 0;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+tbody tr:hover {
+  background-color: #d6d6d6;
+}
+
+
+/* =========================Average Calculator======================== */
+
+.average-calculator{
+  background-color: #f0f0f0;
+}
+.average{
+  max-width : 1200px;
+  margin : auto;
+  padding: 30px 20px;
+}
+.average-grid{
+  display : grid;
+  grid-template-columns : 1fr 1fr;
+  gap : 50px
+}
+
+.avergae-buttons{
+  display : flex;
+  gap: 10px; 
+  flex-wrap : wrap;
+}
+
+.single-button button{
+  background-color : #d6d6d6;
+  color : black;
+  padding : 15px;
+  border : none;
+  /* width : 100%; */
+  font-size : 17px;
+  font-weight : 600;
+  border-radius : 5px
+
+}
+.single-button button.active{
+  background-color : black;
+  color : white;
+}
+.single-button button:hover{
+  background-color : black;
+  color : white;
+}
+
+.percentage-grid{
+  display : grid;
+  grid-template-columns : 1fr 1fr;
+  gap : 50px;
+  margin : 10px 0;
+}
+
+.from-inputs{
+display : grid;
+grid-template-columns : 1fr 1fr 1fr;
+gap : 10px
+}
+
+.percentage-from-inputs input{
+  border : 1px solid gray;
+  padding : 15px;
+  border : 1px solid gray;
+  border-radius : 5px;
+  outline : none
+}
+
+.form-buttons{
+  display : flex;
+  gap : 10px;
+  margin : 20px 0;
+}
+
+.form-buttons button{
+  background-color : black;
+  color : white;
+  padding : 10px 15px;
+  border : none; 
+  font-size : 15px; 
+  border-radius : 5px;
+}
+
+.additional-field {
+margin : 20px 0;
+display : flex;
+flex-direction : column;
+gap : 10px
+}
+.additional-field input{
+padding : 15px;
+font-size : 16px;
+border : 1px solid gray;
+outline : none
+
+}
+.percentage-calculate-button button {
+  background-color : black;
+  color : white;
+  border: none;
+  padding : 12px 15px;
+  font-size : 15px;
+  border-radius : 5px
+}
+.heading h3{
+  color : #333333;
+  font-size : 23px;
+  font-weight : 600;
+}
+.result-values{
+  border : 1px solid gray;
+  border-radius : 5px;
+  color : #333333; 
+  padding : 15px 10px;
+  font-size : 16px;
+  font-weight : 700;
+  margin-bottom : 10px
+}
+.percentage-from-inputs{
+  display : grid;
+  grid-template-columns : 1fr 1fr;
+  gap : 10px;
+  margin : 30px 0
+}
+.letters-from-inputs{
+  display : grid;
+  grid-template-columns : 1fr 1fr;
+  gap : 10px;
+  margin : 30px 0;
+}
+.letters-from-inputs input{
+  padding : 15px;
+  border : 1px solid gray;
+  border-radius : 5px;
+  outline : none;
+}
+.letters-from-inputs select{
+  padding : 15px;
+  border : 1px solid gray;
+  border-radius : 5px;
+  outline : none;
+}
+
+
+/* ====================Final Calculator==================== */
+.final-calculator{
+  background-color : #F0F0F0;
+}
+
+.final{
+  max-width : 1200px;
+  margin : auto;
+  padding : 30px 20px;
+}
+.form-field select{
+  padding : 15px;
+  border-radius : 5px;
+  outline : none;
+  border: 1px solid gray;
+}
+@media screen and (max-width: 2200px) {
+  .icon {
+    display: none;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (max-width: 768px) {
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .percentage-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .logo {
+    max-width: 40%;
+    height: 100%;
+  }
+  .icon {
+    display: block;
+  }
+  .nav-list {
+    display: none;
+  }
+  .percentage-from-inputs{
+  grid-template-columns : 1fr
+  }
+  .result-grid{
+    grid-template-columns : 1fr 1fr
   }
 }

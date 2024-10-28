@@ -1,7 +1,9 @@
+# Desription
+The grading calculator is an intuitive tool that helps students and educators simplify academic assessments. It calculates overall grades based on customizable weightings for assignments and provides insights into averages and letter grades. With visual progress tracking, it empowers users to enhance their academic performance.
+
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 ## Available Scripts
 
 In the project directory, you can run:
